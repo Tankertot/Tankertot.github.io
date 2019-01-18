@@ -7,6 +7,7 @@
 /* @pjs globalKeyEvents="true"; */ 
 void setup() {
 size(400, 400);
+background(0,0,0);
 }
 //Every. Damn. Thing.
 {
@@ -375,10 +376,10 @@ cloudXii += 2;
     playerCar(pX, 300);
  {
     
-    if(keyz[39] === true && keyIsPressed){
+    if(keyz[39] === true && keyPressed){
         pX += 10;
     }
-    if(keyz[37] === true && keyIsPressed){
+    if(keyz[37] === true && keyPressed){
         pX -= 10;
     }
       if(pX < 100){
@@ -653,10 +654,12 @@ text("I warned you \n You best not sleep tonight",200,200);
 }};
 
 }
-    </script>
-<canvas id="pjs"> </canvas>
-
+   </script>
 </head>
+    <body>
+    <canvas id="pjs"> </canvas>
+    </body>
+
 
 
 
