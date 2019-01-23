@@ -13,7 +13,141 @@
 		void setup() {
 		  size(400, 400);
 		}
-		background(255,0,0);
+		var bobX = 20;
+var bobY = 20;
+var bobR;
+var joeX = 380;
+var joeY = 380;
+var joeR;
+var jimX = 380;
+var jimY = 20;
+var jimR;
+var itX = 20;
+var itY = 380;
+var bob = true;
+var joe = true;
+var jim = true;
+
+draw = function() {
+background(255, 255, 255);
+if(bob === true){
+//Bob
+{
+bobR = floor(random(1,5)); 
+fill(0, 0, 0);
+rect(bobX, bobY, 10, 10);
+if(bobX < 385){
+if(bobR === 1){
+bobX += 5;
+}
+}
+if(bobX > 15){
+if(bobR === 2){
+bobX -= 5;
+}
+}
+if(bobY < 385){
+if(bobR === 3){
+bobY += 5;
+}
+}
+if(bobY > 15){
+if(bobR === 4){
+bobY -= 5;
+} 
+}
+}
+}
+if(joe === true){
+//Joe
+{
+joeR = floor(random(1,5)); 
+fill(0, 0, 0);
+rect(joeX, joeY, 10, 10);
+if(joeX < 385){
+if(joeR === 1){
+joeX += 5;
+}
+}
+if(joeX > 15){
+if(joeR === 2){
+joeX -= 5;
+}
+}
+if(joeY < 385){
+if(joeR === 3){
+joeY += 5;
+}
+}
+if(joeY > 15){
+if(joeR === 4){
+joeY -= 5;
+} 
+}    
+}
+}
+if(jim === true){
+//Jim
+{
+jimR = floor(random(1,5)); 
+fill(0, 0, 0);
+rect(jimX, jimY, 10, 10);
+if(jimX < 385){
+if(jimR === 1){
+jimX += 5;
+}
+}
+if(jimX > 15){
+if(jimR === 2){
+jimX -= 5;
+}
+}
+if(jimY < 385){
+if(jimR === 3){
+jimY += 5;
+}
+}
+if(jimY > 15){
+if(jimR === 4){
+jimY -= 5;
+} 
+}    
+}
+}
+//It
+{
+fill(255, 0, 200);
+stroke(255, 255, 255);
+rect(itX,itY,10,10);
+if(keyPressed === true){
+if(keyCode === UP && itY > 15){
+ itY -= 5;   
+}
+if(keyCode === DOWN && itY < 385){
+ itY += 5;   
+}
+if(keyCode === RIGHT && itX < 385){
+ itX += 5;   
+}
+if(keyCode === LEFT && itX > 15){
+ itX -= 5;   
+}
+}
+if(keyPressed === false){
+ keyCode = 0;   
+}
+if(itX > bobX && itX < bobX + 15 && itY > bobY && itY < bobY + 15){
+ bob = false;   
+}
+if(itX > joeX && itX < joeX + 15 && itY > joeY && itY < joeY + 15){
+ joe = false;   
+}
+if(itX > jimX && itX < jimX + 15 && itY > jimY && itY < jimY + 15){
+ jim = false;   
+}
+}
+};
+
 
 		
 		</script>
