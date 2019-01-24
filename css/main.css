@@ -22,6 +22,7 @@ a:hover {
 div.pat:hover {
     cursor: -webkit-grab; 
     cursor: grab;
+    width: 200px;
 }
 h1 {
     font-size: 3em;
