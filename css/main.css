@@ -19,7 +19,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
-div.pat:hover {
+span.pat:hover {
     cursor: -webkit-grab; 
     cursor: grab;
     width: 200px;
